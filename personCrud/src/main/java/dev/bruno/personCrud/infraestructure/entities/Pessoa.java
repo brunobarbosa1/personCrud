@@ -30,7 +30,7 @@ public class Pessoa {
     private List<Assinatura> assinatura;
 
     public void setEmail(String email) {
-        if (!email.contains("@") || email.contains("[$#!%¨&*()_-:><,.?/|]")) {
+        if (!email.contains("@") || !email.contains(".")) {
             throw new IllegalArgumentException("Email deve conter @ e não pode ter caracteres especiais");
         }
         this.email = email;
